@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Chart.bundle.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="Chart.js"></script>
+    <script src="Chart.min.js"></script>
+    <style src="Chart.css"></style>
+    <style src="Chart.min.css"></style>
+
+    <script src="chartjs-plugin-zoom.js"></script>
+    <script src="chartjs-plugin-zoom.min.js"></script>
+    <script src="plugin.js"></script>
+    <script src="gulpfile.js"></script>
+    <script src="rollup.config.js"></script>
+    <title>Service Record Employment Capitol - Pangasinan</title>
+</head>
+<style>
+    .btn {
+    border: none;
+    background-color: dodgerblue;
+    font-size: 20px;
+    font-family: arial narrow;
+    cursor: pointer;
+    display: inline-block;
+    }
+    .btn:hover {background: green;}
+ 
+    .monthly {color: white;}
+    .yearly {color: white;}
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+        height: 80%;
+    }
+    .div {
+        overflow: scroll;
+    }
+</style>
+<body>
+    <h1 style="color:black; font-family:arial narrow;" align="center" >Service Record Capitol - Pangasinan<h1>
+    <center><button class="btn monthly" onclick="monthly();">MONTHLY RECORD</button></center>
+    <div class="container">
+        <canvas id="monthly"></canvas>
+    <script>
+    function monthly(){
+    var chart1 = new Chart(document.getElementById("monthly"), {
+    type: 'line',
+    data: {
+    labels: ["January 2010", "February 2010", "March 2010", "April 2010", "May 2010", "June 2010", "July 2010", "August 2010", "September 2010", "October 2010", "November 2010", "December 2010", "January 2011", "February 2011", "March 2011", "April 2011", "May 2011", "June 2011", "July 2011", "August 2011", "September 2011", "October 2011", "November 2011", "December 2011", "January 2012", "February 2012", "March 2012", "April 2012", "May 2012", "June 2012", "July 2012", "August 2012", "September 2012", "October 2012", "November 2012", "December 2012", "January 2013", "February 2013", "March 2013", "April 2013", "May 2013", "June 2013", "July 2013", "August 2013", "September 2013", "October 2013", "November 2013", "December 2013",  "January 2014", "February 2014", "March 2014", "April 2014", "May 2014", "June 2014", "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",  "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015", "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015", "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016", "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016", "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017", "July 2017", "August 2017", "September 2017", "October 2017", "November 2017", "December 2017", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "August 2018", "September 2018", "October 2018", "November 2018", "December 2018"],
+        datasets: [{ 
+        data: [891,891,891,941,941,941,1052,1052,1052,1089,1089,1089,1992,1992,1992,1992,1992,1992,2079,2079,2079,2079,2153,2153,2252,2252,2252,3106,3106,3106,3130,3130,3130,3142,3142,3142,3871,3871,3871,3871,3871,3871,3883,3883,3883,3883,3883,3883,4526,4526,4526,4526,4526,4526,4588,4588,4588,4588,4588,4588,5169,5169,5169,5169,5169,5169,5713,5713,5713,5713,5713,5713,6281,6281,6306,6306,6306,6899,7443,7976,7976,8509,8509,8509,9042,9042,9042,9042,9042,9042,9525,9525,9525,10020,10020,10020,10515,10515,10515,10515,10515,10515,10910,10910,10910,10910,10910,10910],
+        label: "Casual",
+        backgroundColor: "#3e95cd",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6997,6997,6997,6997,6997,6997,6997,6997,6997,13994,13994,13994,13994,13994,13994,13994,13994,13994,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,20991,27989,27989,34986,34986,34986,34986,34986,34986],
+        label: "Contract of Service",
+        backgroundColor: "#8e5ea2",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [269,280,283,334,337,340,407,410,412,422,422,422,433,433,433,436,436,436,437,437,437,438,438,438,444,444,445,449,449,450,453,453,453,456,456,456,469,469,469,469,469,469,471,471,471,471,471,471,473,473,473,473,473,473,474,474,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,475,476,476,476,476,476,476,476,476,476,476,476,476,476,476,476,476,476,476],
+        label: "Job Order",
+        backgroundColor: "#3cba9f",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [31,59,90,120,151,181,212,243,273,304,334,365,396,424,455,485,516,546,577,608,638,669,699,730,761,789,820,850,881,911,942,973,1003,1034,1064,1095,1126,1154,1185,1215,1246,1276,1307,1338,1368,1399,1429,1460,1491,1519,1550,1580,1611,1641,1672,1703,1733,1764,1794,1825,1856,1884,1915,1945,1976,2006,2037,2068,2098,2129,2159,2220,2251,2279,2310,2340,2371,2401,2432,2463,2493,2524,2554,2585,2616,2644,2675,2705,2736,2766,2797,2828,2858,2889,2919,2950,2981,3009,3040,3070,3101,3131,3162,3193,3223,3254,3284,3315],
+        label: "Permanent",
+        backgroundColor: "#e8c3b9",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [3,3,3,3,3,4,4,4,4,4,5,5,7,7,7,7,7,8,8,8,8,8,9,10,10,10,10,12,12,12,12,12,12,12,13,13,14,15,15,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,17,17,23,23,24,24,24,24,24,24,24,44,44,44,45,45,46,47,48,48,48,48,48,77,78,78,79,79,80,81,91,91,91,91,91,92,92,93,93,93,93,94,99,99,99,99,99,99,99,100,100,100,100,100,100],
+        label: "Temporary",
+        backgroundColor: "#c45850",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+   options: {
+    plugins: {
+    zoom: {
+        pan: {
+            enabled: false,
+            mode: 'xy',
+            rangeMin: {
+                x: null,
+                y: null
+            },
+            rangeMax: {
+                x: null,
+                y: null
+            },
+            onPan: function({chart}) { console.log(`I was panned!!!`); }
+        },
+        zoom: {
+            enabled: true,
+            drag: true,
+            mode: 'xy',
+ 
+            rangeMin: {
+                x: null,
+                y: null
+            },
+            rangeMax: {
+                x: null,
+                y: null
+            },
+            speed: 0.1,
+            onZoom: function({chart}) { console.log(`I was zoomed!!!`); }
+        }
+    }
+},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    },
+})
+};
+</script>
+</div>
+    <center><button class="btn yearly" onclick="yearly();">YEARLY RECORD</button></center>
+    <div class="container">
+    <canvas id="yearly"></canvas>
+<script>
+    function yearly(){
+    var chart2 = new Chart(document.getElementById("yearly"), {
+    type: 'line',
+    data: {
+    labels: ["2010","2011","2012","2013","2014","2015","2016","2017","2018"],
+    datasets: [{ 
+        data: ["1089","2153","3142","3883","4588","5713","8509","10020","10910"],
+        label: "Casual",
+        backgroundColor: "#3e95cd",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [0,6997,13994,20991,20991,20991,20991,20991,34986],
+        label: "Contract of Service",
+        backgroundColor: "#8e5ea2",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [422,438,456,471,475,475,475,476,476],
+        label: "Job Order",
+        backgroundColor: "#3cba9f",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [365,730,1095,1460,1825,2220,2585,2950,3315],
+        label: "Permanent",
+        backgroundColor: "#e8c3b9",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [5,10,13,16,24,47,81,94,100],
+        label: "Temporary",
+        backgroundColor: "#c45850",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+   options: {
+    plugins: {
+    zoom: {
+        pan: {
+            enabled: false,
+            mode: 'xy',
+            rangeMin: {
+                x: null,
+                y: null
+            },
+            rangeMax: {
+                x: null,
+                y: null
+            },
+            onPan: function({chart}) { console.log(`I was panned!!!`); }
+        },
+        zoom: {
+            enabled: true,
+            drag: true,
+            mode: 'xy',
+ 
+            rangeMin: {
+                x: null,
+                y: null
+            },
+            rangeMax: {
+                x: null,
+                y: null
+            },
+            speed: 0.1,
+            onZoom: function({chart}) { console.log(`I was zoomed!!!`); }
+        }
+    }
+},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    },
+})
+};
+    </script>
+    </div>
+</body>
+</html>

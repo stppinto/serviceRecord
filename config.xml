@@ -1,0 +1,11 @@
+  <widget id="com.example.hello" version="0.0.1">
+        <name>Service Record</name>
+        <description>
+            Service Record Capitol - Lingayen (MONTHLY and YEARLY)
+        </description>
+        <author email="dev@callback.apache.org" href="http://cordova.io">
+            Stefi Pinto
+        </author>
+        <content src="index.html" />
+    <access origin="*" />
+</widget>
